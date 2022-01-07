@@ -10,7 +10,7 @@
 <form style="margin:auto;width:30%" method="post" asp-area="Admin" asp-controller="Equipos" asp-action="Eliminar">
     <p style="display: block;  font-size: 25px; padding: 3PX; margin: 0;text-align:center">¿Seguro de eliminar  el juguete <b>@(Model.Nombre)</b>?</p><br />
     <div id="crudM">
-
+         
 
         @if (System.IO.File.Exists($"{env.WebRootPath}/img/{Model.Id}.jpg"))
         {
