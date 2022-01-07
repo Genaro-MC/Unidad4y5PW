@@ -1,7 +1,10 @@
 ﻿@model PracticaU4y5.Models.Juguete
 @addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
 @inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment env
+@{
+    Layout = "Admin_layout";
 
+}
 <h1>Eliminar equipo</h1>
 
 <form style="margin:auto;width:30%" method="post" asp-area="Admin" asp-controller="Equipos" asp-action="Eliminar">
@@ -11,10 +14,10 @@
 
         @if (System.IO.File.Exists($"{env.WebRootPath}/img/{Model.Id}.jpg"))
         {
-<img style="margin:auto;margin-left:60px; width:300px; height:300px" id="imagePreview" src="~/img/@(Model.Id).jpg" alt="Vista previa de la imagen"> }
-else
-{
-<img style="margin: auto; margin-left: 60px;" id="imagePreview" src="~/img/Nophoto.png" alt="Vista previa de la imagen">}
+            <img style="margin:auto;margin-left:60px; width:300px; height:300px" id="imagePreview" src="~/img/@(Model.Id).jpg" alt="Vista previa de la imagen"> }
+        else
+        {
+            <img style="margin: auto; margin-left: 60px;" id="imagePreview" src="~/img/Nophoto.png" alt="Vista previa de la imagen">}
     </div>
 
     <input asp-for="Nombre" value="@(Model.Nombre)" hidden />
@@ -25,7 +28,7 @@ else
         </p>
         <input type="submit" value="Eliminar" style="padding: 5px;  width:100px;margin-top:100px; margin-left:40px">
         <a href="javascript:window.history.back()" style=" line-height: 18px; width: 100px; height: 18px; display: block; text-align: center; text-decoration: none; b padding: 5px; float: right; margin-top:100px; margin-right:40px">
-           <input style="padding: 5px; width: 100px"  type="button" value=" Regresar"/>
+            <input style="padding: 5px; width: 100px" type="button" value=" Regresar" />
         </a>
     </div>
     <p>

@@ -1,6 +1,9 @@
 ﻿@model PracticaU4y5.Areas.Admin.Models.AgregarViewModel
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "Admin_layout";
 
+}
 <form method="post" action="~/Admin/Juguete/Editar" enctype="multipart/form-data">
     <div>
         <input asp-for="juguete.Id" type="hidden" name="Id" value="@Model.juguete.Id" />
